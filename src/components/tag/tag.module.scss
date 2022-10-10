@@ -1,0 +1,49 @@
+@use '../../scss/abstracts/mixins' as mixin;
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    min-width: 2.5rem;
+    max-width: max-content;
+    min-height: 2.25rem;
+    height: 2.25rem;
+    max-height: max-content;
+    padding: 0.375rem 1.0625rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background-color: var(--purple-0);
+    user-select: none;
+    cursor: pointer;
+}
+
+.tag:active {
+    transform: scale(0.99);
+}
+
+.tag_borderLetf {
+    border-bottom-left-radius: 0.75rem;
+    border-right: 0.5px solid var(--purple-2);
+}
+
+.tag_borderRight {
+    border-bottom-right-radius: 0.75rem;
+    border-left: 0.5px solid var(--purple-2);
+}
+
+.tag__text {
+    margin: 0px;
+    color: var(--white);
+}
+
+@include mixin.table {
+    .tag_borderLetf {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0.75rem;
+    }
+
+    .tag_borderRight {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0.75rem;
+    }
+}

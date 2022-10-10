@@ -1,0 +1,31 @@
+@use '../../scss/abstracts/mixins' as mixin;
+
+.btn {
+    width: 288px;
+    height: 67px;
+    border: 3px solid var(--purple-0);
+    font-weight: 600;
+    background-color: var(---black-0);
+    color: var(--white);
+}
+
+.btn__text {
+    margin: 0;
+    letter-spacing: 0.125rem;
+}
+
+.btn:hover {
+    background-color: var(--purple-1)
+}
+
+.btn:active {
+    background-color: var(--purple-0)
+}
+
+@include mixin.table {
+    .btn {
+       width: 8.75rem;
+       height: 2.6831rem;
+       font-size: 13px;
+    }
+}

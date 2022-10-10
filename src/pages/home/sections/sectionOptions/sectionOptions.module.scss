@@ -1,0 +1,30 @@
+@use '../../../../scss/abstracts/mixins' as mixin;
+
+.sectionOption {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 104px;
+}
+
+.tag__icon {
+    fill: var(--white);
+    stroke: var(--white);
+}
+
+@include mixin.table {
+    .sectionOption {
+        align-items: flex-end;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        top:auto;
+        right: 0;
+        left: 0;
+    }
+}
+
+

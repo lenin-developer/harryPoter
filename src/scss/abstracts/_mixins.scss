@@ -1,0 +1,14 @@
+$movil: 576px;
+$table: 798px;
+
+@mixin movil {
+    @media screen and (max-width: $movil) {
+        @content
+    }
+}
+
+@mixin table {
+    @media screen and (max-width: $table) {
+        @content
+    }
+}
