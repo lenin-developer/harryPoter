@@ -2,11 +2,28 @@
 
     //* color
     --white: #FFFFFF;
-
+    --gray-0:#CCCCCC;
+    --gray-1: #999999;
+    --gray-2: #445664;
+    --gray-3: #333333;
+    --red-0:#FF0000;
+    --yellow-0: #FFF388;
+    --yellow-1: #FFC700;
+    --yellow-3:#FED482;
+    --green-0: #82E95E;
+    --green-1: #1C792B;
+    --blue-0: #66D1FF;
+    --blue-1: #0597B7;
+    --blue-2: #081F32;
     --purple-0: #6B63B5; 
     --purple-1: #6b63b599; 
     --purple-2: #403B6D;
-
-
     ---black-0:  #00000099;
+
+    //*porcentage
+    --percentage-0: 0%;
+    --percentage-100: 100%;
+
+    //*grad
+    --deg-135: 135deg;
 }

@@ -1,0 +1,181 @@
+@use '../../scss/abstracts/mixins' as mixin;
+
+.card {
+    display: grid;
+    grid-template-columns: 13.125rem 19.0625rem;
+    grid-template-rows: 16.5625rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.card__containerImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem 0px 0px 1rem;
+
+}
+
+.containerImg_green {
+    background: linear-gradient(var(--deg-135), var(--green-1) var(--percentage-0), var(--green-0) var(--percentage-100));
+}
+
+.containerImg_yellow {
+    background: linear-gradient(var(--deg-135), var(--yellow-1) var(--percentage-0), var(--yellow-0) var(--percentage-100));
+}
+
+.containerImg_blue {
+    background: linear-gradient(var(--deg-135), var(--blue-1) var(--percentage-0), var(--blue-0) var(--percentage-100));
+}
+
+.containerImg_red {
+    background: linear-gradient(var(--deg-135), var(--red-0) var(--percentage-0), var(--yellow-3) var(--percentage-100));
+}
+
+.card__img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+}
+
+
+
+.card__containerInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.375rem 1.125rem 1.375rem 1.5625rem;
+
+}
+
+.containerInfo_white {
+    background-color: var(--white);
+}
+
+.containerInfo_gray {
+    background-color: var(--gray-0);
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__alive {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--gray-1);
+}
+
+.header__slash {
+    margin: 0 3px;
+}
+
+.header__type {
+    display: inline-block;
+}
+
+.header__btn {
+    width: max-content;
+    height: max-content;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header__icon {
+    stroke: var(--gray-1)
+}
+
+.header__icon_active {
+    fill: var( --gray-3);
+    stroke: var( --gray-3);
+}
+
+.containerInfo__name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--blue-2);
+}
+
+.info__title {
+    display: block;
+    margin: 0;
+    padding-bottom: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-2);
+}
+
+
+.info__data {
+    display: inline;
+    font-size: 13px;
+    color: var(--gray-2);
+    font-weight: 400;
+    margin-left: 5px;
+    text-transform: lowercase;
+}
+
+.resData::first-letter {
+    text-transform: uppercase;
+}
+
+
+
+@include mixin.table {
+    .card {
+        grid-template-columns: 140px;
+        grid-template-rows: 87px 94px;
+        background-color: var(--white);
+        border-radius: 1rem;
+    }
+
+    .card__containerImg {
+        border-radius: 0.3125rem 0.3125rem 0px 0px;
+    }
+    
+    .card__img {
+        width: 4.3125rem;
+        height: 4.3125rem;
+    }
+
+    .card__containerInfo {
+        padding: 0.9375rem 0.5625rem 0.5625rem 0.5625rem;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .card__containerInfo {
+        flex-direction: column-reverse;
+        row-gap: 0.5rem;
+        border-radius: 0 0 0.3125rem 0.3125rem;
+    }
+
+    .containerInfo__name {
+        font-size: 18px;
+    }
+
+    .header__alive {
+        font-weight: 600;
+        font-size: 11px;
+    }
+    
+    .header__slash {
+       display: none;
+    }
+    
+    .header__type {
+        display: block;
+    }
+}

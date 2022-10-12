@@ -1,16 +1,17 @@
 import styles from './selectFilter.module.scss'
 import { Buttom } from '../../../../components'
-import PropTypes from 'prop-types'
+import {func} from 'prop-types'
+import {TextHarry} from '../../../../assets/svg'
 
-export const SelectFilter = () => {
+export const SelectFilter = ({showStudents,showStaffs}) => {
     return (
-        <section className={styles?.sectionFilter}>
-            <h1 className={styles?.sectionFilter__title}>Harrypotter</h1>
+        <section className={styles.sectionFilter}>
+
+            <TextHarry className={styles.sectionFilter__title} />
             <p className={styles?.sectionFilter__p}>Selecciona tu filtro</p>
-            <div className={styles?.containerBtns} >
-                <Buttom text='ESTUDIANTES' />
-                {/* <span className={styles?.space} ></span> */}
-                <Buttom text='STAFF' />
+            <div className={styles.containerBtns} >
+                <Buttom text='ESTUDIANTES' onClick={()=>showStudents()} />
+                <Buttom text='STAFF' onClick={()=>showStaffs()} />
             </div>
         </section>
     );
@@ -18,6 +19,7 @@ export const SelectFilter = () => {
 
 }
 
-SelectFilter.propTypes = {}
-
-SelectFilter.defaultProps = {}
+SelectFilter.propTypes = {
+    showStudents: func.isRequired,
+    showStaffs: func.isRequired,
+}

@@ -1,26 +1,28 @@
 
 import PropTypes from 'prop-types'
 import styles from './sectionCards.module.scss'
+import { Card } from '../../../../components'
+import {useSelector} from 'react-redux'
 
-export const SectionCards = () => {
-    return ( 
-        <section className={styles?.sectionCards}>
+export const SectionCards = ({ typeRequest, handleFavorite }) => {
 
-            <p>aaa</p>
-            <p>sasas</p>
-            <p>aaa</p>
-            <p>sasas</p>
-            <p>aaa</p>
-            <p>sasas</p>
-            <p>aaa</p>
-            <p>sasas</p>
-            <p>aaa</p>
-            <p>sasas</p>
-            <p>aaa</p>
-            <p>sasas</p>
 
+    const {students} = useSelector((state) => state.students)
+    const {staffs} = useSelector((state => state?.staffs))
+    const characters = typeRequest === 'ESTUDIANTE' ? students : staffs;
+
+    return (
+        <section className={styles.sectionCards}>
+            {characters?.map((character, index) => (
+                <Card
+                    key={index}
+                    data={character}
+                    typeRequest={typeRequest}
+                    handleFavorite={handleFavorite}
+                />
+            ))}
         </section>
-     );
+    );
 
 
 }

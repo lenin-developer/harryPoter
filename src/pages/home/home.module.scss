@@ -10,7 +10,7 @@
 .home__main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 25rem 1fr;
+    grid-template-rows: auto 1fr;
     gap: 94px 0;
 }
 
@@ -19,5 +19,8 @@
         font-size: 14px;
         padding: 0 15px;
         background-color: red;
+    }
+    .home__main { 
+        gap: 46px 0;
     }
 }

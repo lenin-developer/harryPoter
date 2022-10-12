@@ -11,6 +11,7 @@
 .sectionFilter__title {
  margin-top: 0px;
  margin-bottom: 1.9375rem;
+ transform: scale(1.1);
 }
 
 .sectionFilter__p{
@@ -31,6 +32,7 @@
     }
     .sectionFilter__title {
         margin-bottom: 0.875rem;
+        transform: scale(0.9);
     }
     .sectionFilter__p{
         font-size: 18px;
@@ -38,6 +40,14 @@
     }
 
     .containerBtns {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 0 9.48px;
+    }
+}
+
+@include mixin.movil {
+    .sectionFilter__title {
+        transform: scale(0.7);
     }
 }

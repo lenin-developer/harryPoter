@@ -1,4 +1,4 @@
-import harryPoter from './harryPoter'
+import {harryPoter} from './harryPoter'
 
 export const  patch = {
     harryPoter
