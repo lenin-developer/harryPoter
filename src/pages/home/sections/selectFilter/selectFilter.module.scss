@@ -23,7 +23,11 @@
 
 .containerBtns {
     display: flex;
-    gap: 0 117px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 693px;
+    flex-wrap: wrap;
+    // gap: 0 117px;
 }
 
 @include mixin.table {

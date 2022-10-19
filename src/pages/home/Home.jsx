@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
-import styles from './home.module.scss'
-import { SectionOptions, SelectFilter, SectionCards } from './sections'
-import { get } from '../../utils/fetchs'
-import { patch } from '../../patch'
 import { useDispatch, useSelector } from 'react-redux';
-import { initStudents, addStudentFavorite, removeStudentFavorite } from '../../redux/students/students'
-import { initStaffs, addStaffFavorite, removeStaffFavorite } from '../../redux/staff/staff'
+import { patch } from '../../patch';
+import { addStaffFavorite, initStaffs, removeStaffFavorite } from '../../redux/staff/staff';
+import { addStudentFavorite, initStudents, removeStudentFavorite } from '../../redux/students/students';
+import { get, postFetch } from '../../utils/fetchs';
+import styles from './home.module.scss';
+import { SectionCards, SectionOptions, SelectFilter } from './sections';
+import { ModalAddCharacter } from '../../components'
+import { uploadFile } from '../../configs/firebase'
+import {v4} from 'uuid'
+import { characterAdapter } from '../../adapters/characterAdapter';
 
 export const Home = () => {
 
@@ -14,6 +18,7 @@ export const Home = () => {
     const { staffs } = useSelector(state => state?.staffs)
 
     const [type, setType] = useState('ESTUDIANTE')
+    const [showModal, setShowModal] = useState(false)
 
     const getStudents = async () => {
         const students = await get(patch?.harryPoter?.STUDENTS)
@@ -48,15 +53,17 @@ export const Home = () => {
     }
 
     const addFavorite = (data) => {
-        if (type === 'ESTUDIANTE') {
-            !MaxFavorites(5) && dispatch(addStudentFavorite({ id: data?.id }))
+        if (data?.type === 'students') {
+            if(!MaxFavorites(5)){
+                dispatch(addStudentFavorite({ id: data?.id }))
+            }
         } else {
             !MaxFavorites(5) && dispatch(addStaffFavorite({ id: data?.id }))
         }
     }
 
     const removeFavorite = (data) => {
-        if (type === 'ESTUDIANTE') {
+        if (data?.type === 'students') {
             dispatch(removeStudentFavorite({ id: data?.id }))
         } else {
             dispatch(removeStaffFavorite({ id: data?.id }))
@@ -71,13 +78,56 @@ export const Home = () => {
         }
     }
 
+
+    // ------------------- modal
+
+    const showModalAddCharacter = () => {
+        setShowModal(!showModal)
+    }
+
+    const submit = async (data) => {
+        try {
+            const url = await uploadFile(data?.image)
+
+            const body = {
+                id: v4(),
+                ...data,
+                image: url 
+            }
+
+            const bodyFormat  = characterAdapter(body)
+
+            if(data?.type === 'students'){
+                await postFetch(patch?.harryPoter.STUDENTS, bodyFormat)
+                await getStudents()
+            }else{
+                await postFetch(patch?.harryPoter.STAFF, bodyFormat)
+                await getStaff()
+            }
+
+
+        } catch (error) {
+            console.log('error')
+        }
+
+
+
+    }
+
+
+
     return (
         <div className={styles.home}>
-            <SectionOptions />
+            <SectionOptions handleFavorite={handleFavorite} showModalAddCharacter={showModalAddCharacter} />
             <main className={styles?.home__main}>
                 <SelectFilter showStudents={showStudents} showStaffs={showStaffs} />
                 <SectionCards typeRequest={type} handleFavorite={handleFavorite} />
             </main>
+
+            <ModalAddCharacter title={'Agregar un personaje'} show={showModal} setShow={showModalAddCharacter} submit={submit}  >
+                <p>hola</p>
+            </ModalAddCharacter>
+
         </div>
     );
 }

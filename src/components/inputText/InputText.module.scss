@@ -1,0 +1,40 @@
+@use '../../scss/abstracts/mixins' as mixin;
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input__label {
+    color: var(--gray-4);
+    font-size: 14px;
+}
+
+.input__text {
+    width: 100%;
+    height: 73px;
+    border-radius: 0.3333rem 0.3333rem 0px 0px;
+    background-color: var(--white-1);
+    border: none;
+    border-bottom: 2px solid var(--gray-4);
+    padding-right: 0.375rem;
+    padding-left: 0.375rem;
+    outline: none;
+}
+
+.input__text:focus {
+    border-bottom: 3px solid var(--purple-0);
+}
+
+@include mixin.table {
+    .input {
+        width: 100%;
+    }
+
+    .input__text {
+        width: 100%;
+        height: 53px;
+    }
+}

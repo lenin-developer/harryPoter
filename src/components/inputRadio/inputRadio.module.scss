@@ -1,0 +1,18 @@
+.input {
+    display: flex;
+}
+
+.input__radio {
+
+    background-color: var(--blue-2);
+}
+
+
+
+.input:hover input[type=radio]:not(:checked) + i{
+	background: #B1E8CD;
+}
+
+.input__label {
+    padding-left: 6px;
+}

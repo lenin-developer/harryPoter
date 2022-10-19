@@ -22,7 +22,8 @@
       "actor": "Dame Maggie Smith",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 2,
@@ -46,7 +47,8 @@
       "actor": "Alan Rickman",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/snape.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 3,
@@ -70,7 +72,8 @@
       "actor": "Robbie Coltrane",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hagrid.png",
-      "favorite": false
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 4,
@@ -94,7 +97,8 @@
       "actor": "David Thewlis",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/lupin.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 5,
@@ -118,7 +122,8 @@
       "actor": "Jim Broadbent",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/slughorn.JPG",
-      "favorite": false
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 6,
@@ -141,7 +146,9 @@
       "hogwartsStaff": true,
       "actor": "Imelda Staunton",
       "alive": true,
-      "image": "http://hp-api.herokuapp.com/images/umbridge.jpg"
+      "image": "http://hp-api.herokuapp.com/images/umbridge.jpg",
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 7,
@@ -165,7 +172,8 @@
       "actor": "Maxime, Alanis and Tommy the cats",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/norris.JPG",
-      "favorite": false
+      "favorite": false,
+      "type": "staff"
     },
     {
       "id": 8,
@@ -189,30 +197,8 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg",
-      "favorite": false
-    },
-    {
-      "id": 9,
-      "name": "bbbbbbbb",
-      "species": "human",
-      "gender": "female",
-      "house": "Gryffindor",
-      "dateOfBirth": "04-10-1925",
-      "yearOfBirth": 1925,
-      "ancestry": "",
-      "eyeColour": "",
-      "hairColour": "black",
-      "wand": {
-        "wood": "",
-        "core": "",
-        "length": ""
-      },
-      "patronus": "tabby cat",
-      "hogwartsStudent": false,
-      "hogwartsStaff": true,
-      "actor": "Dame Maggie Smith",
-      "alive": true,
-      "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
+      "favorite": false,
+      "type": "staff"
     }
   ],
   "students": [
@@ -238,7 +224,8 @@
       "actor": "Daniel Radcliffe",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/harry.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 2,
@@ -262,7 +249,8 @@
       "actor": "Emma Watson",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 3,
@@ -286,7 +274,8 @@
       "actor": "Rupert Grint",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/ron.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 4,
@@ -310,7 +299,8 @@
       "actor": "Tom Felton",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/draco.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 5,
@@ -334,7 +324,8 @@
       "actor": "Robert Pattinson",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/cedric.png",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 6,
@@ -358,7 +349,8 @@
       "actor": "Katie Leung",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/cho.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 7,
@@ -382,7 +374,8 @@
       "actor": "Matthew Lewis",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/neville.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 8,
@@ -406,7 +399,8 @@
       "actor": "Evanna Lynch",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/luna.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 9,
@@ -430,7 +424,8 @@
       "actor": "Bonnie Wright",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/ginny.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 10,
@@ -454,7 +449,8 @@
       "actor": "Jamie Waylett",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/crabbe.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
     },
     {
       "id": 11,
@@ -478,7 +474,83 @@
       "actor": "Josh Herdman",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/goyle.jpg",
-      "favorite": false
+      "favorite": false,
+      "type": "students"
+    },
+    {
+      "name": "a",
+      "species": "",
+      "gender": "male",
+      "house": "",
+      "dateOfBirth": "b",
+      "yearOfBirth": 0,
+      "ancestry": "",
+      "eyeColour": "c",
+      "hairColour": "d",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": 0
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Daniel Radcliffe",
+      "alive": true,
+      "image": "https://firebasestorage.googleapis.com/v0/b/imagenes-67a26.appspot.com/o/0f8ffb32-3fc1-400f-8495-e9f0b06324cf?alt=media&token=f20dd046-645e-4057-8605-f6c8ba645134",
+      "favorite": false,
+      "type": "students",
+      "id": "86d2838e-07a8-456d-b6c8-0bf095c36e10"
+    },
+    {
+      "name": "aadsds d sd ds sd sdsdsdsd sd sd s dds",
+      "species": "",
+      "gender": "male",
+      "house": "",
+      "dateOfBirth": "fdfdfddfdfdndjsdjsdjdsjhsdjhdshjdsjhdsdsdsdsdsds",
+      "yearOfBirth": 0,
+      "ancestry": "",
+      "eyeColour": "sd",
+      "hairColour": "dsdssssssssssssssssssssssssssssssssssssssssssss",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": 0
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Daniel Radcliffe",
+      "alive": true,
+      "image": "https://firebasestorage.googleapis.com/v0/b/imagenes-67a26.appspot.com/o/6a6c5ac1-a425-4e07-a5f5-680607e12755?alt=media&token=9bfbd320-d8b2-4631-8a13-cd0bace1e5dc",
+      "favorite": false,
+      "type": "students",
+      "id": "dc6e8445-6fe3-477a-8989-75661d16ec0f"
+    },
+    {
+      "name": "ss",
+      "species": "",
+      "gender": "male",
+      "house": "",
+      "dateOfBirth": "ss",
+      "yearOfBirth": 0,
+      "ancestry": "",
+      "eyeColour": "ss",
+      "hairColour": "ss",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": 0
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Daniel Radcliffe",
+      "alive": true,
+      "image": "https://firebasestorage.googleapis.com/v0/b/imagenes-67a26.appspot.com/o/32731cd3-6861-46ae-8b14-7e03efee8c4b?alt=media&token=aceb0904-b457-4ebf-841a-0ea5dcecab63",
+      "favorite": false,
+      "type": "students",
+      "id": "807101cc-bdab-4759-be8c-88b34852b779"
     }
   ]
 }

@@ -1,8 +1,12 @@
+@use '../../scss/abstracts/mixins' as mixin;
+
 .favoriteItem {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--purple-0);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .favoriteItem:nth-child(1) {
@@ -38,6 +42,11 @@
     display: contents;
 }
 
+.borderRadio {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
 .container__span {
     margin: auto;
     width: 90%;
@@ -46,4 +55,25 @@
 
 .favoriteItem:last-of-type span {
     display: none;
+}
+
+.item__btn {
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@include mixin.table {
+
+    .borderRadio {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        // resert
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 }

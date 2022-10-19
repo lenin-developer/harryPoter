@@ -1,13 +1,13 @@
 @use '../../../../scss/abstracts/mixins' as mixin;
 
 .sectionOption {
-    width: 100%;
     height: max-content;
     display: flex;
     justify-content: flex-end;
     position: fixed;
     top: 0;
     right: 104px;
+    left: 104px;
     z-index: 3;
 }
 
@@ -17,11 +17,9 @@
 }
 
 .wrappre__tag {
-    width:  max-content;
-    position: relative;
+    width: max-content;
     display: flex;
-    justify-content: flex-end;
-    position: fixed;
+    position: absolute;
 }
 
 .favorite {
@@ -33,22 +31,33 @@
     padding-top: 10px;
 }
 
+.borderRadio {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
 @include mixin.table {
     .sectionOption {
         align-items: flex-end;
         justify-content: center;
         position: fixed;
         bottom: 0;
-        top:auto;
+        top: auto;
         right: 0;
         left: 0;
     }
 
     .favorite {
-        transform: translateY(-95%);
+        transform: translateY(-85%);
         padding-top: 0;
         padding-bottom: 10px;
     }
+
+    .borderRadio {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        // resert
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 }
-
-

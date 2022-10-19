@@ -16,9 +16,9 @@ export const Card = ({ data, typeRequest, handleFavorite }) => {
 
 
     return (
-        <div className={styles?.card}>
+        <div className={styles.card}>
             <div className={`${styles.card__containerImg} ${backgroundImg}`}>
-                <img src={data?.image} alt={`imagen de ${data?.actor}`} className={styles.card__img} />
+                <img src={data.image} alt={`imagen de ${data?.actor}`} className={styles.card__img} />
             </div>
             <div className={`${styles.card__containerInfo} ${backgroundInfo}`}>
                 <div className={styles.header}>

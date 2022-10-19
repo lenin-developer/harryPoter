@@ -1,0 +1,29 @@
+.containerInput {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 6px;
+    background-color: var(---black-0);
+    color: var(--white);
+}
+
+.containerInput:hover {
+    background-color: var(--purple-1);
+}
+
+
+.containerInput:active {
+    background-color: var(--purple-0);
+}
+
+.containerInput__label {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.containerInput__file {
+    display: none;
+}
